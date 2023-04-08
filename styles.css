@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    /* margin: 0; */
+}
+body{
+    margin: 0;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    font-family: sans-serif;
+    
+
+}
+.main{
+   margin: auto;   
+   width:78%;   
+   height: 76vh;
+   background-color: rgb(2, 4, 47);
+   display: flex;
+  
+   z-index: 0;
+  
+   
+}
+
+.welcome{
+    width: 47%;
+    margin: 22px 10px;
+    z-index: 2;
+
+}
+.welcome h1{
+    color: white;
+    font-size: 80px;
+    word-spacing: 5px;
+    display: block;
+    font-weight: bold;
+    
+    
+    }
+
+.login{
+    width: 47%;
+    margin-left: auto;
+    z-index: 2;
+    
+    
+   
+}
+.login h2{
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    
+}
+@media(max-width:1300px){
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .welcome{
+        width: 100%;
+    }
+    .login{
+        width: 100%;
+    }
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+input{
+    display: block;
+    height: 30px;
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+    width: 85%;
+    text-align: center;
+}
+button{
+    display: block;
+    width: 65%;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: cyan;
+    border: none;
+    text-align: center;
+    height: 30px;
+    font-weight: bold;
+}
+.animat{
+  
+position: absolute;
+width: 90vh;
+height: 90vh;
+background-image: url(pick.svg);
+
+background-repeat: no-repeat;
+z-index: 1;
+animation: go 10s infinite linear;
+  transform: rotate(190deg);
+
+}
+@keyframes go {
+    0%{
+        transform: rotate(-35deg); 
+    }
+    50%{
+        transform:rotate(185deg); 
+    }
+    100%{
+        transform: rotate(-35deg); 
+    }
+
+    
+}
+#point{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(167, 130, 202, 0.7);
+    border: none;
+    border-radius: 50%;
+    top: var(--yp);
+    left: var(--xp);
+    z-index: 2;
+    transition: 0.1s;
+
+}
